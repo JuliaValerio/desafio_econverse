@@ -8,9 +8,10 @@ Essa aplicação foi desenvolvido para [Desafio Econverse](https://github.com/Ec
  * Landing Page
 
 ## :wrench: Tecnologias utilizadas
-* React
+* React;
 * Typescript;
 * LESS;
+* Vite;
 
 ## :rocket: Rodando o projeto
 Para rodar o repositório é necessário clonar o mesmo:
