@@ -1,7 +1,9 @@
+import "./style.less"
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../Header/Header';
-import "./style.less"
+import Banner from '../Banner/Banner';
+import Categorias from '../Categorias/Categorias';
 
 const Home: React.FC = () => {
 return(
@@ -14,6 +16,8 @@ return(
     </Helmet>
     <div className="home">
       <Header />
+      <Banner />
+      <Categorias/>
     </div>
   </>
 );

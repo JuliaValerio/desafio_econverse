@@ -21,11 +21,12 @@ nav{
       img{
         margin-right: .3em;
       }
-    }
-    
-    .header-menu__item a:hover {
-      color: @secondary-color;
-      font-weight: bold;
+      &:hover {
+        color: @secondary-color;
+        font-weight: bold;
+        transform: scale(1.1);
+        transition: 1s;
+      }
     }
   }
 }
