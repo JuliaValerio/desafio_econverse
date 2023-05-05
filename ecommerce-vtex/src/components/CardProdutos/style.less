@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20em;
+
+    .card-produto {
+        width: 25em;
+        height: 15em;
+        border-radius: 1em;
+        background-image: url(/src/assets/img/bg-card.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .itens {
+            color: white;
+            font-family: Poppins;
+            width: 50%;
+            margin: 2em 2em 0em 2em;
+
+            button {
+                width: 10em;
+                height: 2.5em;
+                background: #F71963;
+                border-radius: 5px;
+                border: none;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 27px;
+                color: white;
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 1s;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

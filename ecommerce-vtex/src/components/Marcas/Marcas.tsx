@@ -1,17 +1,18 @@
 import "./style.less"
 
-type ItensProps = {
-  title: string;
-  img: string;
-}
-
-const Marcas = (props: ItensProps) => {
+const Marcas = () => {
   return (
     <>
+      <div className="marca">
+        <h1>Navegue por marcas</h1>
         <div className="marcas">
-          <p>{props.title}</p>
-          <image href={props.img}/>
+          <div className="icon"></div>
+          <div className="icon"></div>
+          <div className="icon"></div>
+          <div className="icon"></div>
+          <div className="icon"></div>
         </div>
+      </div>
     </>
   );
 }
