@@ -5,6 +5,12 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Slider, { SliderRef, Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Modal, {
+  ModalHeader, 
+  ModalBody, 
+  useModal
+} from "../Modal/Modal";
+import iphone from '../../assets/img/iphone.svg'
 
 interface Produto {
   productName: string;
@@ -15,6 +21,7 @@ interface Produto {
 
 const SlideProdutos: React.FC = () => {
   const [sliderRef, setSliderRef] = useState<SliderRef | undefined>(undefined);
+  const { isShowing, toggle } = useModal();
 
   const settings: Settings = {
     arrows: true,
@@ -44,6 +51,7 @@ const SlideProdutos: React.FC = () => {
         <h1> Produtos relacionados </h1>
         <hr />
       </div>
+      <b className='todos'>Ver todos</b>
       <div className='controls'>
         <button onClick={() => sliderRef?.slickPrev()}>
           <FaChevronLeft />
@@ -59,18 +67,33 @@ const SlideProdutos: React.FC = () => {
               <div className='card' key={index}>
                 <img src={produto.photo} alt={produto.productName} />
                 <div className='text'>
-                  <h3>{produto.productName}</h3>
+                  <h4>{produto.productName}</h4>
                   <p>{produto.descriptionShort}</p>
                   <p><b>R$ {produto.price}</b></p>
                 </div>
                 <div className='end'>
                   <p><i>Frete grátis</i></p>
-                  <button>Comprar</button>
+                  <button onClick={toggle}>Comprar</button>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
+        <Modal {...{isShowing, toggle}}>
+        <ModalHeader {...{toggle}}>
+        </ModalHeader>
+        <ModalBody>
+          <div className='modal-produto'>
+            <img src={iphone}></img>
+            <div className='text'>
+              <p>LOREM IPSUM DOLOR SIT AMET</p>
+              <p>R$ 1.499,90</p>
+              <p>Many desktop publishing packages and web page editors now many desktop publishing</p>
+              <p>Veja mais detalhes do produto &#10095;</p>
+            </div>
+          </div>
+        </ModalBody>   
+      </Modal>
       </div>
     </>
   );
