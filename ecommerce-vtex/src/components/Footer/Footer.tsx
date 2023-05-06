@@ -4,6 +4,7 @@ import instaicon from '../../assets/img/insta-icon.svg'
 import fbicon from '../../assets/img/fb-icon.svg'
 import formaspagamento from '../../assets/img/formas_pagamento.svg'
 import logos from '../../assets/img/logos_base.svg'
+import Newsletter from "../Newsletter/Newsletter"
 
 const Footer = () => {
   return (
@@ -36,7 +37,7 @@ const Footer = () => {
             <img className="pagamentos" src={formaspagamento}></img>
           </div>
           <div className="">
-
+            <Newsletter />
           </div>
         </div>
         <div className="line2">
