@@ -44,4 +44,4 @@ $ npm run dev
 </table>
 
 ## :dart: Status do projeto
-*🚧 Em contrução*
+*✔️ Finalizado*
